@@ -1,0 +1,173 @@
+
+<div class="content-wrapper">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Dashboard SLI</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+    <section class="content">
+  
+      <div class="container-fluid">
+       
+        <div class="row">
+       
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Vendas Realizadas</span>
+                <span class="info-box-number">10<small>%</small></span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Comrpas Realizadas</span>
+                <span class="info-box-number">41,410</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- <div class="clearfix hidden-md-up"></div> -->
+  
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Contas a Receber</span>
+                <span class="info-box-number">760</span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Contas a Pagar</span>
+                <span class="info-box-number">2,000</span>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+        <div class="row">
+          
+          <div class="col-md-12">
+            
+            <div class="card">
+              
+              <div class="card-header">
+                <h5 class="card-title">Resumo de Contas</h5>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+                      <i class="fas fa-wrench"></i>
+                    </button>
+  
+                  </div>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+  
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <!-- <p class="text-center"><strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong></p> -->
+                    <div class="chart">
+                      <canvas id="salesChart" height="180" style="height: 180px;"></canvas>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <p class="text-center"><strong>Dados Realizados</strong></p>
+                    <div class="progress-group">Vendas no mês<span class="float-right"><b>160</b>/200</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-primary" style="width: 80%"></div>
+                      </div>
+                    </div>
+  
+                    <div class="progress-group">Compras no mês<span class="float-right"><b>310</b>/400</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-danger" style="width: 75%"></div>
+                      </div>
+                    </div>
+  
+                    <div class="progress-group">
+                      <span class="progress-text">Contas a Receber do mês</span>
+                      <span class="float-right"><b>480</b>/800</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-success" style="width: 60%"></div>
+                      </div>
+                    </div>
+  
+                    <div class="progress-group">Contas a Pagar do mês
+                      <span class="float-right"><b>250</b>/500</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-warning" style="width: 50%"></div>
+                      </div>
+                    </div>
+  
+                  </div>
+  
+                </div>
+              </div>
+  
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-sm-3 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 17%</span>
+                      <h5 class="description-header">15000</h5>
+                      <span class="description-text">Vendas Realizadas </span>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-warning"><i class="fas fa-caret-left"></i> 0%</span>
+                      <h5 class="description-header">10000</h5>
+                      <span class="description-text">Compras Realizadas</span>
+                    </div>
+                  </div>
+  
+                  <div class="col-sm-3 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 20%</span>
+                      <h5 class="description-header">9000</h5>
+                      <span class="description-text">Contas a Receber</span>
+                    </div>
+                  </div>
+  
+                  <div class="col-sm-3 col-6">
+                    <div class="description-block">
+                      <span class="description-percentage text-danger"><i class="fas fa-caret-down"></i> 18%</span>
+                      <h5 class="description-header">5000</h5>
+                      <span class="description-text">Contas a Pagar</span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </section>
+  

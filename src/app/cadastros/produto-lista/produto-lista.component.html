@@ -1,0 +1,92 @@
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-12">
+
+                    <h1 class="mt-4">Produto</h1>
+
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Consulta</li>
+                    </ol>
+
+                    <div class="container">
+
+                        <div class="row">
+
+                            <nav>
+                                <button class="btn btn-warning" (click)="novoCadastro()">
+                                    <i class="fa fa-plus"></i> Novo
+                                </button>
+                            </nav>
+
+                            <div class="col-md-12">
+                                <div class="alert alert-success" role="alert" *ngIf="mensagemSucesso">
+                                    {{mensagemSucesso}}
+                                </div>
+
+                                <div class="alert alert-danger" role="alert" *ngIf="mensagemErro">
+                                    {{mensagemErro}}
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Descrição</th>
+                                                <th>Quantidade</th>
+                                                <th>Valor</th>                                                
+                                                <th>Opções</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let produto of produtoLista">
+                                                <td>{{produto.id}}</td>
+                                                <td>{{produto.descricao}}</td>
+                                                <td>{{produto.quantidade}}</td>
+                                                <td>{{produto.valor}}</td>                                                
+                                                <td>
+                                                    <button class="btn btn-primary"
+                                                        routerLink="/produto/form/{{ produto.id }}">
+                                                        <i class="fa fa-pen-square"></i>
+                                                    </button>
+                                                    <button class="btn btn-danger" (click)="adicionaSelecionado(produto)"
+                                                        data-toggle="modal" data-target="#modalDelecao">
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div id="modalDelecao" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-reader">
+                                            <h4>Confirmação</h4>
+                                        </div>
+                                        <div class="modal-body" *ngIf="produtoSelecionado">
+                                            Confirma a deleção do Cliente {{produtoSelecionado.id}} -
+                                            {{produtoSelecionado.descricao }}
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-sucess" (click)="deletar()"
+                                                data-dismiss="modal">Confirmar </button>
+                                            <button class="btn btn-default" data-dismiss="modal">Cancela</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
